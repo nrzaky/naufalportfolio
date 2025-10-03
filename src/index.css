@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 218 14% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 14% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 14% 16%;
+
+    --primary: 264 83% 62%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 216 33% 97%;
+    --secondary-foreground: 218 14% 16%;
+
+    --muted: 216 33% 97%;
+    --muted-foreground: 218 11% 46%;
+
+    --accent: 264 40% 94%;
+    --accent-foreground: 264 83% 32%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 264 83% 62%;
+
+    --radius: 0.75rem;
+
+    /* Custom Portfolio Design System */
+    --hero-gradient: linear-gradient(135deg, hsl(264 83% 62%) 0%, hsl(249 89% 69%) 50%, hsl(234 89% 74%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(264 40% 98%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(264 83% 62% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(218 14% 16% / 0.08);
+    --shadow-glow: 0 0 40px hsl(264 83% 62% / 0.2);
+    
+    /* Animation */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 218 27% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 218 27% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 218 27% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 264 83% 62%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 218 20% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 218 20% 14%;
+    --muted-foreground: 218 11% 65%;
+
+    --accent: 218 20% 14%;
+    --accent-foreground: 264 83% 72%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 218 20% 14%;
+    --input: 218 20% 14%;
+    --ring: 264 83% 62%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+
+  .gradient-text {
+    background: var(--hero-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
