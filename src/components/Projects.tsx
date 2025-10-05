@@ -8,7 +8,7 @@ const Projects = () => {
       id: 1,
       title: 'Portfolio Website',
       description: 'Built with React, Tailwind CSS, and deployed on the web.',
-      technologies: ['React', 'Tailwind CSS'],
+      technologies: ['React', 'Tailwind CSS', 'Vite', 'shadcn-ui', 'TypeScript'],
       githubUrl: 'https://github.com/nrzaky/naufalportfolio',
       liveUrl: 'https://naufalraikhanzaky.vercel.app',
       image: '/placeholder.svg'
