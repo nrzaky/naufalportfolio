@@ -9,8 +9,8 @@ const Projects = () => {
       title: 'Portfolio Website',
       description: 'Built with React, Tailwind CSS, and deployed on the web.',
       technologies: ['React', 'Tailwind CSS'],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: 'https://github.com/nrzaky/naufalportfolio',
+      liveUrl: 'https://naufalraikhanzaky.vercel.app',
       image: '/placeholder.svg'
     },
     {
