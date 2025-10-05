@@ -11,7 +11,7 @@ const Projects = () => {
       technologies: ['React', 'Tailwind CSS', 'Vite', 'shadcn-ui', 'TypeScript'],
       githubUrl: 'https://github.com/nrzaky/naufalportfolio',
       liveUrl: 'https://naufalraikhanzaky.vercel.app',
-      image: '/placeholder.svg'
+      image: '/imageproject1.png'
     },
     {
       id: 2,
