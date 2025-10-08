@@ -40,7 +40,16 @@ const Certificates = () => {
       credentialUrl: '',
       image: '/certificateimg/certificate-software-engineering-introduction.png'
     },
-  ];
+    {
+      id: 5,    
+      title: 'Web Development Fundamentals',
+      description: 'Completed a Full Topic with Specialization during 9 hours in: WEBSITE DEVELOPMENT FUNDAMENTAL ',
+      issuedBy: 'E-Learning Myskill',
+      date: '8 October 2025', 
+      credentialUrl: 'https://storage.googleapis.com/myskill-v2-certificates/topic-IXppB88r5Rj19e8Pm65p/azhgxChCUFPqDwBHX3pCHhZtafC3-q84vu7Lq8KAw0IkkQKs7.pdf',
+      image: '/certificateimg/certificate-web-development.jpg'
+    },
+  ];``
 
   return (
     <section id="certificates" className="py-20">
