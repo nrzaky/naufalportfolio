@@ -22,6 +22,24 @@ const Certificates = () => {
       credentialUrl: 'https://www.freecodecamp.org/certification/naufal0467/back-end-development-and-apis',
       image: '/certificateimg/certificate-back-end-development-and_apis.png'
     },
+    {
+      id: 3,    
+      title: 'Responsive Web Design',
+      description: 'Completed a Responsive Web Design course.',
+      issuedBy: 'Freecodecamp',
+      date: '03 February 2025', 
+      credentialUrl: 'https://www.freecodecamp.org/certification/naufal0467/responsive-web-design',
+      image: '/certificateimg/certificate-responsive-web-design.png'
+    },
+    {
+      id: 4,    
+      title: 'Software Engineering Introduction',
+      description: 'Successfully completed the Software Engineering Introduction course during Tech Week organized by Tech Voice Indonesia.',
+      issuedBy: 'Tech Voice Indonesia',
+      date: '16-20 June 2025', 
+      credentialUrl: '',
+      image: '/certificateimg/certificate-software-engineering-introduction.png'
+    },
   ];
 
   return (
