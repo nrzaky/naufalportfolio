@@ -49,6 +49,15 @@ const Certificates = () => {
       credentialUrl: 'https://storage.googleapis.com/myskill-v2-certificates/topic-IXppB88r5Rj19e8Pm65p/azhgxChCUFPqDwBHX3pCHhZtafC3-q84vu7Lq8KAw0IkkQKs7.pdf',
       image: '/certificateimg/certificate-web-development.jpg'
     },
+    {
+      id: 6,    
+      title: 'Backend Development Introduction',
+      description: 'Completing the Introduction to Backend Development',
+      issuedBy: 'E-Learning Myskill',
+      date: '13 October 2025', 
+      credentialUrl: 'https://storage.googleapis.com/myskill-v2-certificates/course-KAM00EzGvvNLrDAKwWvb/azhgxChCUFPqDwBHX3pCHhZtafC3-lOKG0AUJALDu2Wpj9R28.pdf',
+      image: '/certificateimg/backend-development-introduction.jpg'
+    },
   ];``
 
   return (
