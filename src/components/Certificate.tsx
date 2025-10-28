@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Award, Building } from 'lucide-react';
+import { ExternalLink, Building } from 'lucide-react';
 
 const Certificates = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const certificates = [
     {
       id: 1,
@@ -14,51 +17,67 @@ const Certificates = () => {
       image: '/certificateimg/sertifikat_course_653_4886998_290925220159_page-0001.jpg'
     },
     {
-      id: 2,    
+      id: 2,
       title: 'Back End Development and APIs',
       description: 'Completed a Back End Development and APIs course.',
       issuedBy: 'Freecodecamp',
-      date: '27 June 2025', 
+      date: '27 June 2025',
       credentialUrl: 'https://www.freecodecamp.org/certification/naufal0467/back-end-development-and-apis',
       image: '/certificateimg/certificate-back-end-development-and_apis.png'
     },
     {
-      id: 3,    
+      id: 3,
       title: 'Responsive Web Design',
       description: 'Completed a Responsive Web Design course.',
       issuedBy: 'Freecodecamp',
-      date: '03 February 2025', 
+      date: '03 February 2025',
       credentialUrl: 'https://www.freecodecamp.org/certification/naufal0467/responsive-web-design',
       image: '/certificateimg/certificate-responsive-web-design.png'
     },
     {
-      id: 4,    
+      id: 4,
       title: 'Software Engineering Introduction',
-      description: 'Successfully completed the Software Engineering Introduction course during Tech Week organized by Tech Voice Indonesia.',
+      description:
+        'Successfully completed the Software Engineering Introduction course during Tech Week organized by Tech Voice Indonesia.',
       issuedBy: 'Tech Voice Indonesia',
-      date: '16-20 June 2025', 
+      date: '16-20 June 2025',
       credentialUrl: '',
       image: '/certificateimg/certificate-software-engineering-introduction.png'
     },
     {
-      id: 5,    
+      id: 5,
       title: 'Web Development Fundamentals',
-      description: 'Completed a Full Topic with Specialization during 9 hours in: WEBSITE DEVELOPMENT FUNDAMENTAL ',
+      description:
+        'Completed a Full Topic with Specialization during 9 hours in: WEBSITE DEVELOPMENT FUNDAMENTAL ',
       issuedBy: 'E-Learning Myskill',
-      date: '8 October 2025', 
-      credentialUrl: 'https://storage.googleapis.com/myskill-v2-certificates/topic-IXppB88r5Rj19e8Pm65p/azhgxChCUFPqDwBHX3pCHhZtafC3-q84vu7Lq8KAw0IkkQKs7.pdf',
+      date: '8 October 2025',
+      credentialUrl:
+        'https://storage.googleapis.com/myskill-v2-certificates/topic-IXppB88r5Rj19e8Pm65p/azhgxChCUFPqDwBHX3pCHhZtafC3-q84vu7Lq8KAw0IkkQKs7.pdf',
       image: '/certificateimg/certificate-web-development.jpg'
     },
     {
-      id: 6,    
+      id: 6,
       title: 'Backend Development Introduction',
       description: 'Completing the Introduction to Backend Development',
       issuedBy: 'E-Learning Myskill',
-      date: '13 October 2025', 
-      credentialUrl: 'https://storage.googleapis.com/myskill-v2-certificates/course-KAM00EzGvvNLrDAKwWvb/azhgxChCUFPqDwBHX3pCHhZtafC3-lOKG0AUJALDu2Wpj9R28.pdf',
+      date: '13 October 2025',
+      credentialUrl:
+        'https://storage.googleapis.com/myskill-v2-certificates/course-KAM00EzGvvNLrDAKwWvb/azhgxChCUFPqDwBHX3pCHhZtafC3-lOKG0AUJALDu2Wpj9R28.pdf',
       image: '/certificateimg/backend-development-introduction.jpg'
     },
-  ];``
+    {
+      id: 7,
+      title: 'Website Development Back-End',
+      description: 'Completing the Website Development Back-End Short Class',
+      issuedBy: 'Short Class Myskill',
+      date: '13 October 2025',
+      credentialUrl: 'https://drive.google.com/file/d/1ud7ezcW3sRZZpkaj8N1nQzGtaJjLDYxW/view',
+      image: '/certificateimg/sertifikat-website-development-back-end.jpg'
+    },
+  ];
+
+  // Ambil 3 pertama jika showAll = false
+  const visibleCertificates = showAll ? certificates : certificates.slice(0, 3);
 
   return (
     <section id="certificates" className="py-20">
@@ -73,7 +92,7 @@ const Certificates = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates.map((certificate) => (
+          {visibleCertificates.map((certificate) => (
             <Card
               key={certificate.id}
               className="group overflow-hidden hover:shadow-glow transition-all duration-300 animate-slide-up"
@@ -87,8 +106,18 @@ const Certificates = () => {
                 />
                 <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   {certificate.credentialUrl && certificate.credentialUrl !== '#' && (
-                    <Button asChild variant="secondary" size="sm" className="bg-white text-primary hover:bg-white/90">
-                      <a href={certificate.credentialUrl} target="_blank" rel="noopener noreferrer"  aria-label={`View ${certificate.title} certificate`}>
+                    <Button
+                      asChild
+                      variant="secondary"
+                      size="sm"
+                      className="bg-white text-primary hover:bg-white/90"
+                    >
+                      <a
+                        href={certificate.credentialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View ${certificate.title} certificate`}
+                      >
                         <ExternalLink size={16} className="mr-2" />
                         View Certificate
                       </a>
@@ -113,11 +142,12 @@ const Certificates = () => {
 
         <div className="text-center mt-12">
           <Button
-            variant="outline" 
+            variant="outline"
             size="lg"
+            onClick={() => setShowAll(!showAll)}
             className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
           >
-            View All Certificates
+            {showAll ? 'Show Less' : 'View All Certificates'}
           </Button>
         </div>
       </div>
