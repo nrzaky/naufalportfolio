@@ -23,7 +23,7 @@ const Projects = () => {
       image: '/placeholder.svg'
     },
     {
-      id: 3,
+      id: 2,
       title: 'Build a Property Web: Setup Projects & Homepage',
       description: 'Building a Property Website as a platform to showcase property projects and provide an interactive homepage for visitors to explore available listings.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
@@ -31,7 +31,16 @@ const Projects = () => {
       liveUrl: 'https://naufal-residence.vercel.app',
       image: '/placeholder.svg'
     },
-  ];
+    {
+      id: 4,
+      title: 'Build a Article Web: Setup Projects & Homepage',
+      description: 'Building an Article Website as a platform to showcase articles and provide an interactive homepage for visitors to explore available content.',
+      technologies: ['React', 'TypeScript', 'Vite', 'Supabase', 'Tailwind CSS'],
+      githubUrl: 'https://github.com/nrzaky',
+      liveUrl: 'https://artikelin.my.id',
+      image: '/public/artikelin.png'
+    },
+  ];  
 
   return (
     <section id="projects" className="py-20">
