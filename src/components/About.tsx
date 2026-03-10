@@ -38,8 +38,9 @@ const About = () => {
                 
                 <div className="flex space-x-4">
                   <Button variant="outline" size="sm">
-                    <Download size={16} className="mr-2" />
-                    Download CV
+                    <a href="https://bit.ly/naufalcv" target="_blank" rel="noopener noreferrer">
+                      Resume
+                    </a>
                   </Button>
                   <Button variant="ghost" size="icon">
                     <a href="https://github.com/nrzaky"><Github size={20} /></a>
