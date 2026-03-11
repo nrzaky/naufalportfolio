@@ -38,15 +38,19 @@ const About = () => {
                 
                 <div className="flex space-x-4">
                   <Button variant="outline" size="sm">
-                    <a href="https://bit.ly/naufalcv" target="_blank" rel="noopener noreferrer">
-                      Resume
+                    <a href="/naufal_resume.pdf" download>
+                      Download Resume
                     </a>
                   </Button>
                   <Button variant="ghost" size="icon">
-                    <a href="https://github.com/nrzaky"><Github size={20} /></a>
+                    <a href="https://github.com/nrzaky" target="_blank" rel="noopener noreferrer">
+                      <Github size={20} />
+                    </a>
                   </Button>
                   <Button variant="ghost" size="icon">
-                    <a href="https://linkedin.com/in/naufalraikhanz"><Linkedin size={20} /></a>
+                    <a href="https://linkedin.com/in/naufalraikhanz" target="_blank" rel="noopener noreferrer">
+                      <Linkedin size={20} />
+                    </a>
                   </Button>
                 </div>
               </div>
