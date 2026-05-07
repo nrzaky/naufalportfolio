@@ -30,7 +30,7 @@ const Contact = () => {
 
     // contoh integrasi EmailJS
     emailjs.send(
-      'service_ktmzzg9',
+      'service_tjh89d4',
       'template_uoi7bmd',
       formData,
       'qqjZNa7GzNJEWj2qy'
