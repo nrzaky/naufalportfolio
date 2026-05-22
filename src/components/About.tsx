@@ -34,7 +34,7 @@ const About = () => {
                 </div>
                 
                 <h3 className="text-2xl font-bold mb-4">Naufal Raikhan Zaky</h3>
-                <p className="text-primary font-semibold mb-6">Backend Developer</p>
+                <p className="text-primary font-semibold mb-6">Software Engineer</p>
                 
                 <div className="flex space-x-4">
                   <Button variant="outline" size="sm">

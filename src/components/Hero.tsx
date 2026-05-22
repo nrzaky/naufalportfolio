@@ -35,10 +35,7 @@ const Hero = () => {
             Hi, I'm <span className="gradient-text">Naufal Raikhan Zaky</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Backend Developer crafting robust and scalable solutions with{' '}
-            <span className="text-primary font-semibold">HTML</span>,{' '}
-            <span className="text-primary font-semibold">CSS</span>, and{' '}
-            <span className="text-primary font-semibold">Golang</span>
+            <span className="text-primary font-semibold">Junior Software Engineer</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
