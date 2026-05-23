@@ -38,7 +38,7 @@ const About = () => {
                 
                 <div className="flex space-x-4">
                   <Button variant="outline" size="sm">
-                    <a href="/naufal_resume.pdf" download>
+                    <a href="/naufal_raikhan_zaky_resume.pdf" download>
                       Download Resume
                     </a>
                   </Button>
