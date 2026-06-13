@@ -27,7 +27,7 @@ const Footer = () => {
             >
               Naufal Raikhan Zaky
             </button>
-            <p className="text-muted-foreground mt-2">Backend Developer</p>
+            <p className="text-muted-foreground mt-2">Junior Software Engineer</p>
           </div>
 
           {/* Social Links */}
@@ -40,9 +40,9 @@ const Footer = () => {
                 className="hover:bg-primary/10 hover:text-primary transition-all duration-200 rounded-full"
                 asChild
               >
-                <a 
-                  href={href} 
-                  target="_blank" 
+                <a
+                  href={href}
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
                 >
@@ -80,12 +80,10 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-muted-foreground text-sm flex items-center justify-center gap-1">
-              © {currentYear} Naufal Raikhan Zaky. Made with{' '}
-              <Heart size={14} className="text-red-500 fill-current" />
-              {' '}and code.
+              © {currentYear} Naufal Raikhan Zaky
             </p>
             <p className="text-xs text-muted-foreground/70 mt-1">
-              Built with React, Tailwind CSS, and deployed on the web.
+              Built with React, Tailwind CSS, Vite and deploy with Vercel
             </p>
           </div>
         </div>

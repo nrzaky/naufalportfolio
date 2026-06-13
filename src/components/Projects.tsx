@@ -4,7 +4,7 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
-      {
+    {
       id: 1,
       title: 'Build a Article Web: Setup Projects & Homepage',
       description: 'Building an Article Website as a platform to showcase articles and provide an interactive homepage for visitors to explore available content.',
@@ -52,7 +52,7 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A collection of projects that showcase my backend development expertise and problem-solving abilities
+            A collection of projects that showcase my software engineering expertise and problem-solving abilities
           </p>
         </div>
 
